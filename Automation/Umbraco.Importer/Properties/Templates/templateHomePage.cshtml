@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    var title = Model.Value<string>("metaDataTitle");
+    var content = Model.Value<string>("contentBody");
+}
+<section>
+    <article>
+        <header>@Html.Partial("_Menu", Model)</header>
+        @Html.Raw(content)
+    </article>
+</section>

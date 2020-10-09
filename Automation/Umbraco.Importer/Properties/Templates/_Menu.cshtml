@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    var siteNodes = new List<IPublishedContent> { Model.Root() };
+    siteNodes.AddRange(Model.Root().Descendants());
+}
+<nav>
+    <ul class="nav navbar-nav">
+        @foreach (var node in siteNodes.Where(x => x.IsVisible()))
+        {
+            var url = node.Id == Model.Id ? "#" : node.Url;
+            <li>
+                <a href="@url">@node.Name</a>
+            </li>
+        }
+    </ul>
+</nav>

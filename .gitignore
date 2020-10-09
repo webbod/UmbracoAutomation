@@ -3,3 +3,6 @@
 ################################################################################
 
 /Automation/packages
+/Automation/Umbraco.Importer/bin/Debug
+/Automation/Umbraco.Importer/obj/Debug
+/Automation/.vs/Automation/v16
